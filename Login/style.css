@@ -1,14 +1,13 @@
+@font-face {
+  font-family: workSans;
+  src: url("fonts/WorkSans-VariableFont_wght.ttf");
+}
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: workSans, sans-serif;
 }
-
-/*svg * {*/
-/*  !*transform-origin: center;*!*/
-/*  transform-origin: 50%;*/
-/*  transform-box: fill-box;*/
-/*}*/
 
 .container {
   min-height: 100vh;
@@ -18,8 +17,7 @@
 /* Left side */
 .logo-container {
   background-color: #47BFE2;
-  min-width: 100vh;
-  max-width: 42rem;
+  width: 50vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -60,15 +58,14 @@
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  bottom: 2px;
+  bottom: 10px;
+  font-weight: bold;
   font-size: 0.9rem;
   z-index: 10;
 }
 
 /* Circles */
 .circle {
-  width: 100px;
-  height: 100px;
   border-radius: 50%;
 }
 
@@ -108,13 +105,12 @@
     width: 0;
     height: 0;
   }
-  80% {
+  50% {
     background-color: #ffffff00;
   }
   100% {
-    background-color: #ffffff00;
-    width: 80%;
-    height: 80%;
+    width: 50vw;
+    height: 50vw;
   }
 }
 
@@ -149,28 +145,28 @@
   flex: 1;
 }
 
-.login .title{
+.login .title {
   margin-bottom: 2rem;
 }
 
-.login .message{
+.login .message {
   margin-bottom: 3rem;
   color: #9D9C9B;
 }
 
-.login .form{
+.login .form {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.login .form .input{
+.login .form .input {
   width: 100%;
   margin-top: 0.5rem;
   position: relative;
 }
 
-.login .form .input .fa{
+.login .form .input .fa {
   font-size: 11px;
   color: #bfbebd;
   transform: translate(-50%, -50%);
@@ -178,7 +174,8 @@
   top: 50%;
   left: 4%;
 }
-.login .form .input input{
+
+.login .form .input input {
   width: 100%;
   padding: 1rem 1rem 1rem 2.5rem;
   font-size: 1rem;
@@ -187,14 +184,17 @@
   border: 0;
   border-bottom: 1px solid #bfbfbf;
 }
-.login .form .input input::placeholder{
+
+.login .form .input input::placeholder {
   text-align: right;
 }
-.login .form .security{
+
+.login .form .security {
   display: flex;
   margin-bottom: 2rem;
 }
-.login .form .refresh{
+
+.login .form .refresh {
   align-self: flex-end;
   margin-right: 0.3rem;
   margin-bottom: 0.6rem;
@@ -202,16 +202,18 @@
   color: #757575;
   cursor: pointer;
 }
-.login .form .code{
+
+.login .form .code {
   height: 58%;
   margin-right: 0.5rem;
   align-self: flex-end;
 }
-.login .form .submit{
+
+.login .form .submit {
   width: 100%;
   padding: 0.4rem 0.4rem 0.6rem;
   background-color: #0F8FDC;
-  color:white;
+  color: white;
   font-size: 1rem;
   outline: none;
   border: 0;
