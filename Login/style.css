@@ -1,0 +1,221 @@
+@font-face {
+  font-family: workSans;
+  src: url("fonts/WorkSans-VariableFont_wght.ttf");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: workSans, sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Left side */
+.logo-container {
+  background-color: #47BFE2;
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Logo and Circles position*/
+.logo-container .circle,
+.logo-container .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Logo */
+.logo-container .logo {
+  width: 3rem;
+  height: 3rem;
+  z-index: 10;
+  fill: white;
+}
+
+/* Title */
+.logo-container .title {
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 56%;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 10;
+}
+
+/* Footer */
+.logo-container .footer {
+  color: #ffffff;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+/* Circles */
+.circle {
+  border-radius: 50%;
+}
+
+.circle:nth-of-type(1) {
+  animation: circle 4s linear infinite;
+  animation-delay: 500ms;
+}
+
+.circle:nth-of-type(2) {
+  animation: circle 4s linear infinite;
+  animation-delay: 800ms;
+}
+
+.circle:nth-of-type(3) {
+  animation: circle 4s linear infinite;
+  animation-delay: 1100ms;
+}
+
+.circle:nth-of-type(4) {
+  animation: circle 4s linear infinite;
+  animation-delay: 1400ms;
+}
+
+.circle:nth-of-type(5) {
+  animation: circle 4s linear infinite;
+  animation-delay: 1700ms;
+}
+
+.circle:nth-of-type(6) {
+  animation: circle 4s linear infinite;
+  animation-delay: 2000ms;
+}
+
+@keyframes circle {
+  0% {
+    background-color: #ffffff30;
+    width: 0;
+    height: 0;
+  }
+  50% {
+    background-color: #ffffff00;
+  }
+  100% {
+    width: 50vw;
+    height: 50vw;
+  }
+}
+
+/* Spinner Square */
+.logo-container .spinner {
+  width: 70vh;
+  height: 70vh;
+  background: linear-gradient(190deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 20%);
+  transform-origin: top left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: spinner 8s linear infinite;
+  /*animation-delay: 500ms;*/
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(-45deg);
+  }
+  from {
+    transform: rotate(315deg);
+  }
+}
+
+.login {
+  padding: 0 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.login .title {
+  margin-bottom: 2rem;
+}
+
+.login .message {
+  margin-bottom: 3rem;
+  color: #9D9C9B;
+}
+
+.login .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login .form .input {
+  width: 100%;
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.login .form .input .fa {
+  font-size: 11px;
+  color: #bfbebd;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 4%;
+}
+
+.login .form .input input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 2.5rem;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.login .form .input input::placeholder {
+  text-align: right;
+}
+
+.login .form .security {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.login .form .refresh {
+  align-self: flex-end;
+  margin-right: 0.3rem;
+  margin-bottom: 0.6rem;
+  font-size: .8rem;
+  color: #757575;
+  cursor: pointer;
+}
+
+.login .form .code {
+  height: 58%;
+  margin-right: 0.5rem;
+  align-self: flex-end;
+}
+
+.login .form .submit {
+  width: 100%;
+  padding: 0.4rem 0.4rem 0.6rem;
+  background-color: #0F8FDC;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
