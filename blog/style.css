@@ -2,3 +2,74 @@
   font-family: workSans;
   src: url("fonts/WorkSans-VariableFont_wght.ttf");
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #53A5B5;
+}
+
+header * {
+  color: white;
+}
+
+header .nav {
+  width: 100%;
+  padding: 1rem 12vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+header .nav .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+header .nav .right {
+  display: flex;
+}
+
+header .nav .right .links ul {
+  list-style: none;
+  display: flex;
+}
+header .nav .right .links ul a{
+  text-decoration: none;
+  padding: 0.5rem;
+  margin-right: 0.3rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+header .nav .right .links ul a:hover{
+  text-decoration: underline;
+}
+header .nav .right .links ul a .fa-chevron-down{
+  position: relative;
+  top: 10%;
+  left: 4%;
+}
+
+header .nav .right .social{
+  margin-left: 0.5rem;
+}
+header .nav .right .social a{
+  text-decoration: none;
+  padding: 0.2rem;
+}
+
+header .title{
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .title h1{
+  margin-bottom: 2rem;
+}
